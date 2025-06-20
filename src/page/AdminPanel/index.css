@@ -1,0 +1,163 @@
+:root {
+  --admin-bg: #ffffff;
+  --admin-card-bg: #f9fafb;
+  --admin-primary: #4f46e5;
+  --admin-text: #111827;
+  --admin-text-secondary: #6b7280;
+  --admin-border: #e5e7eb;
+  --admin-success: #10b981;
+  --admin-warning: #f59e0b;
+  --admin-danger: #ef4444;
+}
+
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--admin-bg);
+  color: var(--admin-text);
+}
+
+.admin-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 130px;
+  transition: margin-left 0.3s ease;
+  background-color: var(--admin-bg);
+}
+
+.admin-content.collapsed {
+  margin-left: 80px;
+}
+
+.admin-card {
+  background: var(--admin-card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--admin-border);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.admin-table th {
+  background-color: var(--admin-card-bg);
+  font-weight: 600;
+  color: var(--admin-text);
+}
+
+.admin-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background-color: var(--admin-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+}
+
+.btn-danger {
+  background-color: var(--admin-danger);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-bar {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--admin-border);
+  background: white;
+  color: var(--admin-text);
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: var(--admin-primary);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--admin-success);
+}
+
+.status-pending {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--admin-warning);
+}
+
+.page-header {
+  margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--admin-text);
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}

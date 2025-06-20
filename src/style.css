@@ -1,0 +1,27 @@
+@import url("./styles/comm.css");
+@import url("./styles/header.css");
+@import url("./styles/hero.css");
+@import url("./styles/taglines.css");
+@import url("./styles/mosaic.css");
+@import url("./styles/subscription.css");
+@import url("./styles/footer.css");
+@import url("./styles/filter-left.css");
+@import url("./styles/filter-top.css");
+@import url("./styles/characteristics.css");
+@import url("./styles/overview.css");
+@import url("./styles/product.css");
+@import url("./styles/CategoryProductsPage.css");
+@import url("./styles/reviews.css");
+@import url("./styles/basket.css");
+@import url("./styles/auth.css");
+@import url("./styles/cardProduct.css");
+@import url("./styles/details.css");
+@import url("./styles/formalization.css");
+@import url("./styles/ui/title.css");
+@import url("./styles/ui/desc.css");
+@import url("./styles/ui/button.css");
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+}

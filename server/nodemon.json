@@ -1,0 +1,14 @@
+{
+	"watch": [
+		"index.js",
+		"routers",
+		"models",
+		"./parsers"
+	],
+	"ext": "js,json,mjs,cjs",
+	"ignore": [
+		"node_modules",
+		".env"
+	],
+	"exec": "node index.js"
+}

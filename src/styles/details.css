@@ -1,0 +1,128 @@
+.details {
+  padding-top: 75px;
+}
+.button_formalizations {
+    background-color: aqua;
+    width: 60px;
+    height: 60px;
+}
+.details__content {
+  box-shadow: 0px 0px 18.7px 0px rgba(0, 0, 0, 25%);
+  padding: 34px 36px 41px 36px;
+  border-radius: 20px;
+}
+
+.details__content > .title {
+  margin-bottom: 30px;
+}
+
+.details__header {
+  display: grid;
+  margin-bottom: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row: span 1;
+  grid-column: span 5;
+}
+
+.details__container {
+  display: grid;
+  gap: 30px;
+  width: 10 0%;
+}
+
+.ditail {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row: span 1;
+  grid-column: span 5;
+  border-top: 1px solid #d2d2d7;
+  padding-top: 25px;
+}
+
+.details__all {
+  margin-top: 33px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+  .details__content {
+    padding: 25px;
+  }
+
+  .details__all {
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .details {
+    padding-top: 40px;
+  }
+
+  .details__header,
+  .ditail {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+      "name price price"
+      "name count total";
+  }
+
+  .details__header p:nth-child(4),
+  .ditail p:nth-child(4) {
+    grid-area: total;
+    text-align: right;
+  }
+
+  .details__header p:nth-child(1),
+  .ditail h4 {
+    grid-area: name;
+  }
+
+  .details__header p:nth-child(2),
+  .ditail p:nth-child(2) {
+    grid-area: price;
+    text-align: center;
+  }
+
+  .details__header p:nth-child(3),
+  .ditail p:nth-child(3) {
+    grid-area: count;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .details__content {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .details__header,
+  .ditail {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "name name"
+      "price count"
+      "total total";
+  }
+
+  .details__header p:nth-child(4),
+  .ditail p:nth-child(4) {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .details__header p,
+  .ditail p,
+  .ditail h4 {
+    font-size: 14px;
+  }
+
+  .details__all .title {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,198 @@
+.anime-mosaic {
+  padding: 4rem 0;
+  background: #f5f5f7;
+}
+
+.mosaic-container {
+  max-width: 65%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mosaic-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mosaic-card:hover {
+  transform: translateY(-5px);
+}
+
+.mosaic-main {
+  height: 500px;
+  grid-column: 1 / -1;
+}
+
+.mosaic-wide {
+  grid-column: span 2;
+}
+
+.card-image {
+  position: relative;
+  height: 100%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.mosaic-card:hover .card-image img {
+  transform: scale(1.03);
+}
+
+.card-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.5) 60%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.card-title {
+  color: white !important;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.card-desc {
+  color: white !important;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.button-view,
+.button-check_new {
+  color: white !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease !important;
+}
+
+.button-view:hover,
+.button-check_new:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mosaic-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: calc(0.1s * var(--i));
+  opacity: 0;
+}
+
+@media (max-width: 1200px) {
+  .mosaic-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .mosaic-main {
+    height: 450px;
+  }
+
+  .mosaic-card {
+    height: 380px;
+  }
+
+  .card-title {
+    font-size: 2rem;
+  }
+
+  .card-desc {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mosaic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mosaic-wide {
+    grid-column: 1;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-buttons {
+    flex-direction: column;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+  }
+
+  .card-desc {
+    font-size: 1rem;
+  }
+
+  .mosaic-card {
+    height: 350px;
+  }
+}
+.collection-btn-rounded {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 9999px;  
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.collection-btn-rounded:hover {
+  background-color: #1f2937;  
+}

@@ -1,0 +1,358 @@
+/* Основные стили */
+.basket {
+  padding: 20px 0;
+}
+
+.basket__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.basket__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.basket-top__form {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.select-all-checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  padding-left: 28px;
+}
+
+.select-all-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #0071e3;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.select-all-checkbox:hover input ~ .checkmark {
+  background-color: #f0f7ff;
+}
+
+.select-all-checkbox input:checked ~ .checkmark {
+  background-color: #0071e3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.select-all-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.select-all-text {
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1d1d1f;
+}
+
+.selected-count {
+  font-size: 14px;
+  color: #86868b;
+  background: #f5f5f7;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.basket__links {
+  display: flex;
+  gap: 16px;
+}
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ff3b30;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #fff0f0;
+}
+
+.delete-button:disabled {
+  color: #c0c0c0;
+  cursor: not-allowed;
+  background: none;
+}
+
+.delete-button:disabled:hover {
+  background: none;
+}
+
+.delete-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.delete-modal {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.delete-modal h3 {
+  margin-top: 0;
+  color: #1d1d1f;
+}
+
+.delete-modal p {
+  margin: 16px 0 24px;
+  color: #86868b;
+}
+
+.delete-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancel-btn {
+  padding: 8px 16px;
+  background: #f5f5f7;
+  border: none;
+  border-radius: 6px;
+  color: #1d1d1f;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cancel-btn:hover {
+  background: #eaeaea;
+}
+
+.confirm-btn {
+  padding: 8px 16px;
+  background: #ff3b30;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.confirm-btn:hover {
+  background: #e0352b;
+}
+
+/* Стили для пустой корзины */
+.empty-basket {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.empty-basket__text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.empty-basket__button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0071e3;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.empty-basket__button:hover {
+  background-color: #0062c4;
+}
+
+/* Стили для оформления заказа */
+.formalization {
+  background: #f5f5f7;
+  padding: 40px 0;
+}
+
+.formalization__content {
+  display: flex;
+  gap: 40px;
+}
+
+
+.form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field input {
+  padding: 12px 16px;
+  border: 1px solid #d2d2d7;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.formalization_ditails {
+  flex: 0 0 400px;
+}
+
+.button_formalization {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Стили для продуктов */
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.basket-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-checkbox {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+  .formalization__content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .formalization_ditails {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .basket__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .basket__links {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .delete-button {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .basket-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .products-list {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .basket-top__form {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .select-all-checkbox {
+    width: 100%;
+  }
+
+  .delete-modal {
+    max-width: 90%;
+    padding: 16px;
+  }
+
+  .delete-modal__actions {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .confirm-btn {
+    width: 100%;
+  }
+
+  .formalization__form {
+    padding: 0 10px;
+  }
+
+  .form-field input {
+    padding: 10px 12px;
+  }
+}

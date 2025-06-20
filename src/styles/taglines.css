@@ -1,0 +1,148 @@
+.taglines {
+  padding: 2rem 1rem;
+}
+
+.taglines__content > .title {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.taglines__cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.taglines__card {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  min-height: 250px;
+  transition: transform 0.3s ease;
+}
+
+.taglines-card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.taglines-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.taglines-card__info {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  box-sizing: border-box;
+}
+
+.taglines__card .title {
+  width: 100%;
+  margin: 0.5rem 0 0;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.taglines__card .sub {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (min-width: 640px) {
+  .taglines__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .taglines__card {
+    min-height: 300px;
+  }
+
+  .taglines__card .title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .taglines {
+    padding: 3rem 2rem;
+  }
+
+  .taglines__content > .title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .taglines__card .title {
+    font-size: 1.6rem;
+  }
+
+  .taglines__card .sub {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .taglines__cards {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .taglines__card-1 {
+    grid-row: span 2;
+    grid-column: span 2;
+    min-height: 500px;
+  }
+
+  .taglines__card-2,
+  .taglines__card-3,
+  .taglines__card-4 {
+    min-height: 240px;
+  }
+
+  .taglines-card__info {
+    padding: 2rem;
+  }
+
+  .taglines__card .title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .taglines__content > .title {
+    font-size: 2.5rem;
+  }
+
+  .taglines__card .title {
+    font-size: 1.8rem;
+  }
+
+  .taglines__card .sub {
+    font-size: 1.2rem;
+  }
+}

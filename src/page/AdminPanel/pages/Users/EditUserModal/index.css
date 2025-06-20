@@ -1,0 +1,85 @@
+.edit-user-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.edit-user-modal-content {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.edit-user-modal h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.edit-user-modal .form-group {
+  margin-bottom: 16px;
+}
+
+.edit-user-modal .form-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.edit-user-modal .form-group input[type="text"],
+.edit-user-modal .form-group input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.edit-user-modal .form-group.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.edit-user-modal .form-group.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.edit-user-modal .form-group.checkbox input {
+  margin: 0;
+}
+
+.edit-user-modal .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.edit-user-modal .modal-actions button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.edit-user-modal .modal-actions button:last-child {
+  background-color: #3861fb;
+  color: white;
+}
+
+.edit-user-modal .modal-actions button:last-child:hover {
+  background-color: #2c50d4;
+}
